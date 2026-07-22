@@ -1,0 +1,15 @@
+services:
+  rrhh-chatbot:
+    build: .
+    image: rrhh-chatbot:latest
+    container_name: rrhh-chatbot
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "80:8000"
+    volumes:
+      # Persiste el índice FAISS entre reinicios/despliegues para no
+      # regenerar embeddings (ahorra cuota gratuita de la API).
+      - ./backend/data/faiss_index:/app/backend/data/faiss_index
+      - ./backend/logs:/app/backend/logs

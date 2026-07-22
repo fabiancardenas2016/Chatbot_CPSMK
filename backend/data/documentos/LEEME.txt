@@ -1,0 +1,16 @@
+Coloca en esta carpeta los 4 documentos PDF de Recursos Humanos de la
+Caja de Previsión Social Municipal de Bucaramanga:
+
+  - RRHH-1-Resumen.pdf   (ya incluido)
+  - RRHH-2-Resumen.pdf   (falta agregar)
+  - RRHH-3-Resumen.pdf   (falta agregar)
+  - RRHH-4-Resumen.pdf   (falta agregar)
+
+El backend carga automáticamente TODOS los archivos .pdf presentes en esta
+carpeta al construir el índice vectorial (ver backend/rag.py). No es
+necesario modificar código para agregar los documentos restantes: basta con
+copiarlos aquí y reiniciar el backend (o llamar a la reconstrucción del
+índice) para que sean indexados.
+
+Puedes borrar este archivo LEEME.txt; no será indexado porque el cargador
+solo busca archivos con extensión .pdf.

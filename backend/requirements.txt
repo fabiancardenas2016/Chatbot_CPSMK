@@ -1,0 +1,29 @@
+# --- Servidor web ---
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+python-dotenv==1.0.1
+pydantic==2.10.3
+
+# --- LangChain / LangGraph / Google Gemini (nivel gratuito) ---
+# langchain==0.3.14
+# langchain-community==0.3.14
+# langchain-google-genai==2.0.7
+# langchain-text-splitters==0.3.4
+# langchain-classic==0.3.9 # vesion entra conflicto ya que al parecer no existe la version 0.3.9, se cambio a 1.0.1
+# langgraph==0.2.62
+
+# Nota: se fijan las siguientes versiones (más recientes que las probadas inicialmente)
+# porque son las que resultaron estalables sin conflictos de dependencias.
+# El código en triaje.py/rag.py/agent.py es compatible con ambas familias de
+# versiones (0.3.x y 1.x de langchain).
+langchain==1.2.10
+langchain-community==0.4.1
+langchain-google-genai==3.0.1
+langchain-text-splitters==1.1.0
+langchain-classic==1.0.1
+langgraph==1.0.8
+
+# --- RAG: carga de PDF y base vectorial ---
+pymupdf==1.25.1
+faiss-cpu==1.9.0
+# faiss-cpu==1.12.0 # si no funciona la version 1.9.0, probar con esta version

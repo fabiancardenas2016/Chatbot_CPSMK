@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Asistente RR.HH. | Caja de Previsión Social Municipal de Karakura</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app" id="app">
+
+    <header class="topbar">
+      <div class="topbar__brand">
+        <div class="topbar__logo">CPSK</div>
+        <div>
+          <h1>Asistente Virtual de Recursos Humanos</h1>
+          <p>Caja de Previsión Social Municipal de Karakura</p>
+        </div>
+      </div>
+      <button id="btn-modo-oscuro" class="btn-icono" title="Cambiar modo oscuro/claro" aria-label="Cambiar modo oscuro">
+        🌙
+      </button>
+    </header>
+
+    <main class="layout">
+
+      <aside class="panel-info">
+        <section class="tarjeta">
+          <h2>¿Qué es este chatbot?</h2>
+          <p>
+            Soy el asistente virtual del área de Recursos Humanos de la
+            <strong>Caja de Previsión Social Municipal de Karakura</strong>.
+            Respondo <strong>únicamente</strong> con información contenida en los
+            manuales y documentos oficiales de RR.HH. de la entidad (situaciones
+            administrativas, licencias, permisos, vacaciones, nombramientos y
+            posesiones, entre otros).
+          </p>
+          <p>
+            Si tu pregunta no está relacionada con estos documentos, o no cuento
+            con información suficiente, te lo indicaré y, si corresponde, podré
+            derivar tu caso a la apertura de un ticket para que un funcionario lo
+            revise.
+          </p>
+        </section>
+
+        <section class="tarjeta">
+          <h2>Instrucciones de uso</h2>
+          <ol>
+            <li>Escribe tu pregunta en el campo de texto inferior.</li>
+            <li>Presiona <strong>Preguntar</strong> o la tecla Enter.</li>
+            <li>Espera unos segundos mientras el asistente analiza tu consulta.</li>
+            <li>Revisa la respuesta y, si aplica, las citaciones de los documentos usados.</li>
+          </ol>
+          <p class="nota">
+            Ejemplos: "¿Cuándo puedo solicitar una licencia de maternidad?",
+            "¿Cómo funciona la política de permisos?", "¿Existe una política de vacaciones?"
+          </p>
+        </section>
+      </aside>
+
+      <section class="panel-chat">
+        <div id="chat-historial" class="chat-historial" aria-live="polite">
+          <div class="mensaje mensaje--bot">
+            <div class="mensaje__contenido">
+              👋 Hola, soy el asistente de RR.HH. de la CPSK Karakura. ¿En qué puedo ayudarte hoy?
+            </div>
+          </div>
+        </div>
+
+        <div id="indicador-escribiendo" class="indicador-escribiendo oculto">
+          <span></span><span></span><span></span> El asistente está escribiendo...
+        </div>
+
+        <form id="form-pregunta" class="form-pregunta">
+          <input
+            type="text"
+            id="input-pregunta"
+            name="pregunta"
+            placeholder="Escribe tu pregunta sobre Recursos Humanos..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="btn-preguntar">Preguntar</button>
+        </form>
+      </section>
+
+    </main>
+
+    <footer class="pie">
+      Este asistente solo responde con base en los documentos oficiales de RR.HH. de la CPSK Karakura.
+      No sustituye la atención directa del área de Talento Humano.
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

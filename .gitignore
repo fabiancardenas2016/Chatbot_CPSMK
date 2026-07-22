@@ -1,0 +1,17 @@
+# Entornos y secretos
+.env
+*.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Índice vectorial generado (se reconstruye automáticamente)
+backend/data/faiss_index/*
+!backend/data/faiss_index/.gitkeep
+
+# Logs
+backend/logs/
+
+# Sistema
+.DS_Store
