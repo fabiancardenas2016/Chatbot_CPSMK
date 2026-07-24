@@ -1,5 +1,9 @@
 # Chatbot RR.HH. — Caja de Previsión Social Municipal de Karakura
 
+# Para ver el proyecto desplegado visitar el enlace https://chatbot-cpsmk.onrender.com 
+# Nota: en enlace https://chatbot-cpsmk.onrender.com puede tardar 30-60 segundos e incluso 
+# un poco mas en "despertar" si nadie lo ha usado en un rato (15 min sin uso).
+
 Asistente virtual que responde preguntas de Recursos Humanos usando **RAG**
 (Retrieval-Augmented Generation) sobre los manuales oficiales de la entidad,
 con un flujo de **triaje** (LangGraph) que decide si la pregunta se puede
@@ -108,9 +112,20 @@ Ejemplo de respuesta de `/api/preguntar`:
 }
 ```
 
-## 6. Despliegue en Oracle Cloud Infrastructure
+## 6. Despliegue en Render 
+#### Nota: 
+El despliegue en Oracle Cloud Infrastructure (OCI) no fue posible por problemas de disponibilidad 
+de capacidad pero se deja disponible guía completa en [`deploy/DESPLIEGUE_OCI.md`](deploy/DESPLIEGUE_OCI.md).
 
-Ver la guía completa en [`deploy/DESPLIEGUE_OCI.md`](deploy/DESPLIEGUE_OCI.md).
+## 🚀 Demo en vivo 
+
+Puedes probar el chatbot funcionando aquí: **[chatbot-cpsmk.onrender.com](https://chatbot-cpsmk.onrender.com)**
+
+> ⚠️ Nota: el servicio corre en el plan gratuito de Render, que "duerme" tras 15
+> minutos de inactividad. La primera pregunta después de un rato sin uso puede
+> tardar entre 30 y 60 segundos o más mientras el servidor despierta.
+
+![Vista del chatbot de RR.HH. de la CPSM Karakura](assets/chatbot-demo.png)
 
 ## 7. Notas de diseño
 
